@@ -56,3 +56,9 @@ variable "network_interface" {
     type = string
     description = "(optional) describe your variable"
 }
+
+variable "probe_ports" {
+  type = number
+  description = "(optional) describe your variable"
+  default = "443"
+}
