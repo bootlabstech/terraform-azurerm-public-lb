@@ -62,3 +62,8 @@ variable "probe_ports" {
   description = "(optional) describe your variable"
   default = "443"
 }
+
+variable "nic_frontend_ip_name" {
+  type = string
+  description = "(optional) describe your variable"
+}

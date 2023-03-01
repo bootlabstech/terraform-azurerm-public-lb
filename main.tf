@@ -29,7 +29,7 @@ resource "azurerm_lb_backend_address_pool" "backend_pool" {
 
 resource "azurerm_network_interface_backend_address_pool_association" "address_pool_association" {
   network_interface_id    = var.network_interface
-  ip_configuration_name   = "${var.name}-ip"
+  ip_configuration_name   = var.nic_frontend_ip_name
   backend_address_pool_id = azurerm_lb_backend_address_pool.backend_pool.id
 }
 
