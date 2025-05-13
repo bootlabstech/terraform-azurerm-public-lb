@@ -64,3 +64,7 @@ variable "probe_ports" {
   description = "(optional) describe your variable"
   default     = "443"
 }
+variable "disable_outbound_snat" {
+  type = bool
+  default = false
+}

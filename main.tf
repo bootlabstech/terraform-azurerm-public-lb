@@ -46,5 +46,6 @@ resource "azurerm_lb_rule" "lb_rule" {
   backend_port                   = 443
   frontend_ip_configuration_name = "${var.name}-lb_front"
   probe_id                       = azurerm_lb_probe.lb_probe.id
+  disable_outbound_snat          = var.disable_outbound_snat  
   backend_address_pool_ids       = [azurerm_lb_backend_address_pool.backend_pool.id]
 }
