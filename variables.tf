@@ -50,7 +50,7 @@ variable "lb_sku_tier" {
 
 # backend
 variable "backend_network_interface" {
-  type        = string
+  type        = list(string)
   description = "The ID of the Network Interface."
 }
 
